@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -35,7 +35,7 @@ namespace _10._SoftUni_Exam_Results
             }
             return haveThisLanguage;
         }
-        static Dictionary<string, Dictionary<string, int>> ChangePointsIfAreBigger(Dictionary<string, Dictionary<string, int>> usersLanguagesPoints, string user, string language, int points)
+        static void ChangePointsIfAreBigger(Dictionary<string, Dictionary<string, int>> usersLanguagesPoints, string user, string language, int points)
         {
             bool findIt = false;
             foreach (var student in usersLanguagesPoints)
@@ -66,12 +66,10 @@ namespace _10._SoftUni_Exam_Results
                     break;
                 }
             }
-            return usersLanguagesPoints;
         }
-        static Dictionary<string, Dictionary<string, int>> RemoveUser(Dictionary<string, Dictionary<string, int>> usersLanguagesPoints, string user)
+        static void RemoveUser(Dictionary<string, Dictionary<string, int>> usersLanguagesPoints, string user)
         {
             usersLanguagesPoints.Remove(user);
-            return usersLanguagesPoints;
         }
 
         static void Main()
